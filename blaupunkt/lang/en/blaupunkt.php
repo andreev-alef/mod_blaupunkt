@@ -25,7 +25,7 @@
 $string['pluginname'] = 'blaupunkt';
 $string['modulename'] = 'blaupunkt';
 $string['modulename_help'] = 'The lesson activity module enables a teacher to deliver content and/or practice activities in  interesting and flexible ways. A teacher can use the lesson to create a linear set of content pages or instructional activities that offer a variety of paths or options for the learner. In either case, teachers can choose to increase engagement and ensure understanding by including a variety of questions, such as multiple choice, matching and short answer. Depending on the student\'s choice of answer and how the teacher develops the lesson, students may progress to the next page, be taken back to a previous page or redirected down a different path entirely.';
-
+$string['blaupunkttext'] = 'Blau Text';
 
 
 //$string['hellouser'] = 'Hello {$a}!';

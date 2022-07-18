@@ -9,6 +9,9 @@
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="blaupunkt.svg"
+   inkscape:export-filename="!blaupunkt.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +27,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.5852904"
-     inkscape:cx="58.945098"
-     inkscape:cy="562.11412"
+     inkscape:zoom="1.3418155"
+     inkscape:cx="389.02517"
+     inkscape:cy="561.92525"
      inkscape:window-width="1600"
      inkscape:window-height="837"
      inkscape:window-x="-8"
@@ -39,19 +42,25 @@
      inkscape:label="Слой 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:11.7226;stroke-dasharray:none;stroke-opacity:1"
-       id="rect113"
-       width="98.277374"
-       height="98.277374"
-       x="51.833916"
-       y="80.765411"
-       ry="23.559999" />
-    <circle
-       style="fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:8.38066;stroke-dasharray:none;stroke-opacity:1"
-       id="path962"
-       cx="100.9726"
-       cy="129.9041"
-       r="14.809668" />
+    <g
+       id="g2522"
+       inkscape:export-filename=".\g2522.svg"
+       inkscape:export-xdpi="5.5418196"
+       inkscape:export-ydpi="5.5418196">
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:11.7226;stroke-dasharray:none;stroke-opacity:1"
+         id="rect113"
+         width="98.277374"
+         height="98.277374"
+         x="51.833916"
+         y="80.765411"
+         ry="23.559999" />
+      <circle
+         style="fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:8.38066;stroke-dasharray:none;stroke-opacity:1"
+         id="path962"
+         cx="100.9726"
+         cy="129.9041"
+         r="14.809668" />
+    </g>
   </g>
 </svg>
