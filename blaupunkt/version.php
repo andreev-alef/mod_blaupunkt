@@ -27,5 +27,5 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'mod_blaupunkt';
-$plugin->version = 2022071500.014;
+$plugin->version = 2022071500.016;
 $plugin->release = '0.0.1';

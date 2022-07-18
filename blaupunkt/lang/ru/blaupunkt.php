@@ -25,6 +25,7 @@
 $string['pluginname'] = 'blaupunkt';
 $string['modulename'] = 'blaupunkt';
 $string['modulename_help'] = 'Пробный модуль';
+$string['blaupunkttext'] = 'Пробный модуль';
 
 
 //$string['hellouser'] = 'Привет {$a}!';
