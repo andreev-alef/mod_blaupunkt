@@ -14,7 +14,6 @@ require('../../config.php');
 
 $id = optional_param('id', 0, PARAM_INT); // Course Module ID
 
-
 $p = optional_param('p', 0, PARAM_INT);  // alef instance ID
 
 $inpopup = optional_param('inpopup', 0, PARAM_BOOL);
@@ -32,64 +31,44 @@ if ($p) {
     $alef = $DB->get_record('alef', array('id' => $cm->instance), '*', MUST_EXIST);
 }
 
-//$course = $DB->get_record('course', array('id' => $cm->course), '*', MUST_EXIST);
-//
-//require_course_login($course, true, $cm);
-//$context = context_module::instance($cm->id);
-//require_capability('mod/alef:view', $context);
-//
-//// Completion and trigger events.
-//alef_view($alef, $course, $cm, $context);
-//
-//$alef->set_url('/mod/alef/view.php', array('id' => $cm->id));
-//
-//$options = empty($alef->displayoptions) ? array() : unserialize($alef->displayoptions);
-//
-//if ($inpopup and $alef->display == RESOURCELIB_DISPLAY_POPUP) {
-//    $alef->set_aleflayout('popup');
-//    $alef->set_title($course->shortname . ': ' . $alef->name);
-//    $alef->set_heading($course->fullname);
-//} else {
-//    $alef->set_title($course->shortname . ': ' . $alef->name);
-//    $alef->set_heading($course->fullname);
-//    $alef->set_activity_record($alef);
-//}
-//echo $OUTPUT->header();
-//if (!isset($options['printheading']) || !empty($options['printheading'])) {
-//    echo $OUTPUT->heading(format_string($alef->name), 2);
-//}
+$course = $DB->get_record('course', array('id' => $cm->course), '*', MUST_EXIST);
+
+require_course_login($course, true, $cm);
+$context = context_module::instance($cm->id);
+require_capability('mod/alef:view', $context);
+
+echo $OUTPUT->header();
+if (!isset($options['printheading']) || !empty($options['printheading'])) {
+    echo $OUTPUT->heading(format_string($alef->name), 2);
+}
 //
 //// Display any activity information (eg completion requirements / dates).
-//$cminfo = cm_info::create($cm);
-//$completiondetails = \core_completion\cm_completion_details::get_instance($cminfo, $USER->id);
-//$activitydates = \core\activity_dates::get_dates_for_module($cminfo, $USER->id);
-//echo $OUTPUT->activity_information($cminfo, $completiondetails, $activitydates);
-//
-//if (!empty($options['printintro'])) {
-//    if (trim(strip_tags($alef->intro))) {
-//        echo $OUTPUT->box_start('mod_introbox', 'alefintro');
-//        echo format_module_intro('alef', $alef, $cm->id);
-//        echo $OUTPUT->box_end();
-//    }
-//}
-//
-//$content = file_rewrite_pluginfile_urls($alef->content, 'pluginfile.php', $context->id, 'mod_alef', 'content', $alef->revision);
-//$formatoptions = new stdClass;
-//$formatoptions->noclean = true;
-//$formatoptions->overflowdiv = true;
-//$formatoptions->context = $context;
-//$content = format_text($content, $alef->contentformat, $formatoptions);
-//echo $OUTPUT->box($content, "generalbox center clearfix");
-//
-//if (!isset($options['printlastmodified']) || !empty($options['printlastmodified'])) {
-//    $strlastmodified = get_string("lastmodified");
-//    echo html_writer::div("$strlastmodified: " . userdate($alef->timemodified), 'modified');
-//}
+$cminfo = cm_info::create($cm);
+$completiondetails = \core_completion\cm_completion_details::get_instance($cminfo, $USER->id);
+$activitydates = \core\activity_dates::get_dates_for_module($cminfo, $USER->id);
+echo $OUTPUT->activity_information($cminfo, $completiondetails, $activitydates);
 
-//echo $OUTPUT->footer();
+if (!empty($options['printintro'])) {
+    if (trim(strip_tags($alef->intro))) {
+        echo $OUTPUT->box_start('mod_introbox', 'alefintro');
+        echo format_module_intro('alef', $alef, $cm->id);
+        echo $OUTPUT->box_end();
+    }
+}
+
+$content = file_rewrite_pluginfile_urls($alef->content, 'pluginfile.php', $context->id, 'mod_alef', 'content', $alef->revision);
+$formatoptions = new stdClass;
+$formatoptions->noclean = true;
+$formatoptions->overflowdiv = true;
+$formatoptions->context = $context;
+$content = format_text($content, $alef->contentformat, $formatoptions);
+echo $OUTPUT->box($content, "generalbox center clearfix");
+
+if (!isset($options['printlastmodified']) || !empty($options['printlastmodified'])) {
+    $strlastmodified = get_string("lastmodified");
+    echo html_writer::div("$strlastmodified: " . userdate($alef->timemodified), 'modified');
+}
 ?>
 <?= $id ?>
-<hr />
-<?= $p ?>
-<hr />
-<?= var_dump($alef) ?>
+
+<?= $OUTPUT->footer() ?>
