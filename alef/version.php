@@ -24,5 +24,5 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2022072100.0002;       // The current module version (Date: YYYYMMDDXX).
+$plugin->version   = 2022072100.0003;       // The current module version (Date: YYYYMMDDXX).
 $plugin->component = 'mod_alef';       // Full name of the plugin (used for diagnostics)
