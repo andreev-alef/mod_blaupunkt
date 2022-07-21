@@ -29,6 +29,11 @@ require_once($CFG->dirroot . '/course/moodleform_mod.php');
 //require_once($CFG->dirroot.'/mod/alef/locallib.php');
 //require_once($CFG->libdir.'/filelib.php');
 
+function alef_get_editor_options($context) {
+    global $CFG;
+    return array('subdirs' => 1, 'maxbytes' => $CFG->maxbytes, 'maxfiles' => -1, 'changeformat' => 1, 'context' => $context, 'noclean' => 1, 'trusttext' => 0);
+}
+
 class mod_alef_mod_form extends moodleform_mod {
 
     function definition() {
@@ -114,11 +119,6 @@ class mod_alef_mod_form extends moodleform_mod {
         $mform->addElement('hidden', 'revision');
         $mform->setType('revision', PARAM_INT);
         $mform->setDefault('revision', 1);
-    }
-
-    function alef_get_editor_options($context) {
-        global $CFG;
-        return array('subdirs' => 1, 'maxbytes' => $CFG->maxbytes, 'maxfiles' => -1, 'changeformat' => 1, 'context' => $context, 'noclean' => 1, 'trusttext' => 0);
     }
 
     /**
