@@ -18,7 +18,7 @@
 /**
  * List of all pages in course
  *
- * @package mod_alfand
+ * @package mod_alef
  * @copyright  1999 onwards Martin Dougiamas (http://dougiamas.com)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -32,23 +32,23 @@ require_course_login($course, true);
 $PAGE->set_pagelayout('incourse');
 
 // Trigger instances list viewed event.
-$event = \mod_alfand\event\course_module_instance_list_viewed::create(array('context' => context_course::instance($course->id)));
+$event = \mod_alef\event\course_module_instance_list_viewed::create(array('context' => context_course::instance($course->id)));
 $event->add_record_snapshot('course', $course);
 $event->trigger();
 
-$strpage = get_string('modulename', 'alfand');
-$strpages = get_string('modulenameplural', 'alfand');
+$strpage = get_string('modulename', 'alef');
+$strpages = get_string('modulenameplural', 'alef');
 $strname = get_string('name');
 $strintro = get_string('moduleintro');
 $strlastmodified = get_string('lastmodified');
 
-$PAGE->set_url('/mod/alfand/index.php', array('id' => $course->id));
+$PAGE->set_url('/mod/alef/index.php', array('id' => $course->id));
 $PAGE->set_title($course->shortname . ': ' . $strpages);
 $PAGE->set_heading($course->fullname);
 $PAGE->navbar->add($strpages);
 echo $OUTPUT->header();
 echo $OUTPUT->heading($strpages);
-if (!$pages = get_all_instances_in_course('alfand', $course)) {
+if (!$pages = get_all_instances_in_course('alef', $course)) {
     notice(get_string('thereareno', 'moodle', $strpages), "$CFG->wwwroot/course/view.php?id=$course->id");
     exit;
 }
@@ -91,7 +91,7 @@ foreach ($pages as $page) {
     $table->data[] = array(
         $printsection,
         "<a $class href=\"view.php?id=$cm->id\">" . format_string($page->name) . "</a>",
-        format_module_intro('alfand', $page, $cm->id));
+        format_module_intro('alef', $page, $cm->id));
 }
 
 echo html_writer::table($table);
