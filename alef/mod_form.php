@@ -116,6 +116,11 @@ class mod_alef_mod_form extends moodleform_mod {
         $mform->setDefault('revision', 1);
     }
 
+    function alef_get_editor_options($context) {
+        global $CFG;
+        return array('subdirs' => 1, 'maxbytes' => $CFG->maxbytes, 'maxfiles' => -1, 'changeformat' => 1, 'context' => $context, 'noclean' => 1, 'trusttext' => 0);
+    }
+
     /**
      * Enforce defaults here.
      *
