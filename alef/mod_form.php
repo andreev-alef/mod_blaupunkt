@@ -25,6 +25,9 @@
 defined('MOODLE_INTERNAL') || die;
 
 require_once($CFG->dirroot . '/course/moodleform_mod.php');
+//require_once("$CFG->libdir/filelib.php");
+require_once("$CFG->libdir/resourcelib.php");
+
 
 //require_once($CFG->dirroot.'/mod/alef/locallib.php');
 //require_once($CFG->libdir.'/filelib.php');
