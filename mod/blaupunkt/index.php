@@ -24,7 +24,7 @@ $PAGE->set_title($course->shortname.': '.$strblaupunkts);
 $PAGE->set_heading($course->fullname);
 $PAGE->navbar->add($strblaupunkts);
 
-//echo 'GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG';
+
 //
 //echo $OUTPUT->header();
 //echo $OUTPUT->heading($strblaupunkts);

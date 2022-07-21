@@ -1,7 +1,8 @@
 <?php
 
-require_once("../../config.php");
+//require_once("../../config.php");
 
+echo 'GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG';
 $id = optional_param('id', 0, PARAM_INT);    // Course Module ID, or
 $l = optional_param('l', 0, PARAM_INT);     // Blau ID
 
