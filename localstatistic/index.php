@@ -17,7 +17,7 @@
 /**
  * System Status report
  *
- * @package    localstatistic
+ * @package    report_localstatistic
  * @copyright  2020 Brendan Heywood (brendan@catalyst-au.net)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -40,7 +40,7 @@ if (!empty($table->detail)) {
 }
 
 echo $OUTPUT->header();
-echo $OUTPUT->heading(get_string('pluginname', 'localstatistic'));
+echo $OUTPUT->heading(get_string('pluginname', 'report_localstatistic'));
 echo $table->render($OUTPUT);
 echo $OUTPUT->footer();
 
