@@ -1,0 +1,1 @@
+mysqldump --no-tablespaces --user=mdl --password=---=== --host=127.0.0.1 mdl > dump.sql

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * alef module version information
  *
@@ -68,7 +67,14 @@ if (!isset($options['printlastmodified']) || !empty($options['printlastmodified'
     $strlastmodified = get_string("lastmodified");
     echo html_writer::div("$strlastmodified: " . userdate($alef->timemodified), 'modified');
 }
-?>
-<?= $id ?>
 
+$tables_list = $DB->get_record_sql('SELECT count(TABLE_NAME) FROM information_schema.tables'); // WHERE table_schema = "mdl"');
+//$tables_list = $DB->get_record_sql('SELECT table_name FROM information_schema.tables WHERE table_schema = "mdl"');
+
+//$fh = fopen('../../config.php', 'r');
+//$s = readfile('../../config.php');
+?>
+<?= var_dump($tables_list) ?>
+<pre>
 <?= $OUTPUT->footer() ?>
+</pre>

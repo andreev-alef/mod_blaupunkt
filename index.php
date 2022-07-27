@@ -17,4 +17,7 @@ and open the template in the editor.
         </script>
 
     </body>
+	<?php $ex = 1000; ?>
+	
+	<? =$ex ?>
 </html>
