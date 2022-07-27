@@ -12,4 +12,4 @@ passthru("mysqldump --no-tablespaces --user=$CFG->dbuser --password=$CFG->dbpass
 
 exit(0);
 //$gz = 'dmp.gz';
-        //exec("mysqldump --no-tablespaces --user=$CFG->dbuser --password=$CFG->dbpass --host=$CFG->dbhost $CFG->dbname | gzip -9c > $gz", $z, $er);
+//exec("mysqldump --no-tablespaces --user=$CFG->dbuser --password=$CFG->dbpass --host=$CFG->dbhost $CFG->dbname | gzip -9c > $gz", $z, $er);
