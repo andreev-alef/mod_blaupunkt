@@ -2,13 +2,13 @@
 
 $gz = 'dmp.gz';
 $sql = 'dmp.sql';
-//$mime = 'application/x-gzip';
-$mime = 'text/plain';
+$mime_gz = 'application/x-gzip';
+$mime_txt = 'text/plain';
 
-header("Content-Type: $mime");
-header('Content-Disposition: attachment; filename="' . $sql . '"');
+header("Content-Type: $mime_gz");
+header('Content-Disposition: attachment; filename="' . $gz . '"');
 
-//passthru("mysqldump --no-tablespaces --user=mdl --password=---=== --host=localhost mdl | gzip -9cf", $z, $er);
-passthru("mysqldump --no-tablespaces --user=mdl --password=---=== --host=localhost mdl", $z, $er);
+passthru("mysqldump --no-tablespaces --user=mdl --password=---=== --host=localhost mdl | gzip -9c");
+//passthru("mysqldump --no-tablespaces --user=mdl --password=---=== --host=localhost mdl");
 
 exit(0);

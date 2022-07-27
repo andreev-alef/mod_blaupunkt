@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        require('../../config.php');
-        $gz = 'dmp.gz';
-        exec("mysqldump --no-tablespaces --user=$CFG->dbuser --password=$CFG->dbpass --host=$CFG->dbhost $CFG->dbname | gzip -9c > $gz", $z, $er);
-        ?>
-        <?php if ($er == 0): ?>
-            <a href="<?= $gz ?>"><?= $gz ?></a>
-        <?php endif; ?>
-    </body>
-</html>
+<?php
+
+require('../../config.php');
+$gz = 'dmp.gz';
+
+$mime_gz = 'application/x-gzip';
+
+header("Content-Type: $mime_gz");
+header('Content-Disposition: attachment; filename="' . $gz . '"');
+
+passthru("mysqldump --no-tablespaces --user=$CFG->dbuser --password=$CFG->dbpass --host=$CFG->dbhost $CFG->dbname | gzip -9c");
+
+exit(0);
+//$gz = 'dmp.gz';
+        //exec("mysqldump --no-tablespaces --user=$CFG->dbuser --password=$CFG->dbpass --host=$CFG->dbhost $CFG->dbname | gzip -9c > $gz", $z, $er);
