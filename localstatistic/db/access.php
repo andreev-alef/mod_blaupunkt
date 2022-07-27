@@ -17,7 +17,7 @@
 /**
  * System status capabilities
  *
- * @package    report_status
+ * @package    localstatistic
  * @copyright  2020 Brendan Heywood (brendan@catalyst-au.net)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

@@ -22,6 +22,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'System status';
-$string['status:view'] = 'View system status';
+$string['pluginname'] = 'Local statistics';
+$string['status:view'] = 'View statistics';
 $string['privacy:metadata'] = 'This plugin does not store any personal data.';
