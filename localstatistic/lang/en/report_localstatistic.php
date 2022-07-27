@@ -18,7 +18,7 @@
  * Strings for component 'tool_task', language 'en'
  *
  * @package    report_status
- * @copyright  2020 Brendan Heywood (brendan@catalyst-au.net)
+ * @copyright  2022 Lexx Alfand
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

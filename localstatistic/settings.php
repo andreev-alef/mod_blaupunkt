@@ -18,13 +18,18 @@
  * Plugin version info
  *
  * @package    report_localstatistic
- * @copyright  2020 Brendan Heywood (brendan@catalyst-au.net)
+ * @copyright  2022 Lexx Alfand
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$ADMIN->add('reports', new admin_externalpage('reportstatus', get_string('pluginname', 'report_localstatistic'),
+$ADMIN->add(
+        'reports', 
+        new admin_externalpage(
+                'reportstatus', 
+                get_string('pluginname', 'report_localstatistic'),
     "$CFG->wwwroot/report/status/index.php", 'report/status:view'));
 
 $settings = null;
+

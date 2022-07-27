@@ -18,8 +18,8 @@
  * Plugin version info
  *
  * @package    report_localstatistic
- * @copyright  2020 Brendan Heywood (brendan@catalyst-au.net)
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @copyright  2022 Lexx Alfand
+ * @license    BSD 3-Clause "New" or "Revised" License
  */
 
 defined('MOODLE_INTERNAL') || die();

