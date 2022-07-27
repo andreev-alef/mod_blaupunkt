@@ -1,4 +1,5 @@
 <?php
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -41,10 +42,6 @@ if (!empty($table->detail)) {
 echo $OUTPUT->header();
 echo $OUTPUT->heading(get_string('pluginname', 'report_localstatistic'));
 echo $table->render($OUTPUT);
-?>
-<p><?= $CFG->dbname ?>
 
-<p><?= $CFG->dbpass ?>
-<?php
 echo $OUTPUT->footer();
 
