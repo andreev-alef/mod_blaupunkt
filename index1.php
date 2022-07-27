@@ -1,7 +1,14 @@
 <?php
 
 $gz = 'dmp.gz';
-header("Content-Type: application/x-gzip");
-header('Content-Disposition: attachment; filename="' . $gz . '"');
+$sql = 'dmp.sql';
+//$mime = 'application/x-gzip';
+$mime = 'text/plain';
 
-passthru("mysqldump --no-tablespaces --user=mdl --password=---=== --host=localhost mdl | gzip -9c", $z, $er);
+header("Content-Type: $mime");
+header('Content-Disposition: attachment; filename="' . $sql . '"');
+
+//passthru("mysqldump --no-tablespaces --user=mdl --password=---=== --host=localhost mdl | gzip -9cf", $z, $er);
+passthru("mysqldump --no-tablespaces --user=mdl --password=---=== --host=localhost mdl", $z, $er);
+
+exit(0);
